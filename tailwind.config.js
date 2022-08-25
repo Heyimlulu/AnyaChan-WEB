@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: '#1d1d1e',
         secondary: '#262626',
+        accent: '#fcddcd',
         sky: colors.sky,
         teal: colors.teal,
         rose: colors.rose,

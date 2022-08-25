@@ -11,7 +11,8 @@
           </svg>
         </div>
 
-        <div class="rounded-lg px-12 sm:px-72 overflow-hidden shadow sm:grid sm:grid-cols-2 sm:gap-px my-16 sm:my-24">
+        <h2 class="text-center text-3xl tracking-tight font-bold text-white sm:text-4xl">Bot Features</h2>
+        <div class="rounded-lg px-12 lg:px-72 overflow-hidden shadow sm:grid sm:grid-cols-2 sm:gap-px my-16 sm:my-24">
           <div v-for="(action, actionIdx) in actions" :key="action.title" :class="[actionIdx === 0 ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none' : '', actionIdx === 1 ? 'sm:rounded-tr-lg' : '', actionIdx === actions.length - 2 ? 'sm:rounded-bl-lg' : '', actionIdx === actions.length - 1 ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none' : '', 'relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500']">
             <div>
               <span :class="[action.iconBackground, action.iconForeground, 'rounded-lg inline-flex p-3 ring-4 ring-white']">
