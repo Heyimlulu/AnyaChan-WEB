@@ -3,9 +3,8 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const navigation = [
-  { name: 'Features', href: '#', current: true },
-  { name: 'Commands', href: '#', current: false },
-  { name: 'Invite', href: '#', current: false }
+  { name: 'Features', href: '#Features', current: true },
+  { name: 'Commands', href: '#Commands', current: false }
 ]
 </script>
 
@@ -15,10 +14,6 @@ const navigation = [
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <div class="flex">
-            <div class="flex-shrink-0 flex items-center">
-              <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="Workflow" />
-              <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="Workflow" />
-            </div>
             <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
               <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'text-white border-b-2' : 'duration-200 text-white hover:text-white hover:opacity-80', 'inline-flex items-center px-1 pt-1 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
             </div>

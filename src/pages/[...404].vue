@@ -38,11 +38,11 @@ useHead({
       </div>
       <div class="py-16">
         <div class="text-center">
-          <p class="text-base font-semibold text-indigo-600">404</p>
+          <p class="text-base font-semibold text-accent">404</p>
           <h1 class="mt-2 text-4xl font-bold text-white tracking-tight sm:text-5xl sm:tracking-tight">Page not found.</h1>
           <p class="mt-2 text-base text-gray-300">Sorry, we couldn’t find the page you’re looking for.</p>
           <div class="mt-6">
-            <a href="/" class="text-base font-medium text-indigo-600 hover:text-indigo-500">Go back home<span aria-hidden="true"> &rarr;</span></a>
+            <a href="/" class="text-base font-medium text-accent hover:text-accent/90">Go back home<span aria-hidden="true"> &rarr;</span></a>
           </div>
         </div>
       </div>

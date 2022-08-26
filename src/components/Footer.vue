@@ -8,7 +8,7 @@
         </a>
       </div>
       <div class="mt-8 md:mt-0 md:order-1">
-        <p class="text-center text-base text-gray-300">&copy; {{new Date().getFullYear()}} Anya-Chan, Inc. All rights reserved.</p>
+        <p class="text-center text-base text-gray-300">&copy; {{new Date().getFullYear()}} Anya-Chan</p>
       </div>
     </div>
   </footer>

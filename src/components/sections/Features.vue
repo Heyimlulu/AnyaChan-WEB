@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-secondary py-24 relative">
+    <div id="Features" class="bg-secondary py-24 relative">
         <div class="absolute top-0 w-full" style="overflow: hidden;">
           <svg
             preserveAspectRatio="none"
@@ -12,28 +12,59 @@
         </div>
 
         <h2 class="text-center text-3xl tracking-tight font-bold text-white sm:text-4xl">Bot Features</h2>
-        <div class="rounded-lg px-12 lg:px-72 overflow-hidden shadow sm:grid sm:grid-cols-2 sm:gap-px my-16 sm:my-24">
-          <div v-for="(action, actionIdx) in actions" :key="action.title" :class="[actionIdx === 0 ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none' : '', actionIdx === 1 ? 'sm:rounded-tr-lg' : '', actionIdx === actions.length - 2 ? 'sm:rounded-bl-lg' : '', actionIdx === actions.length - 1 ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none' : '', 'relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500']">
-            <div>
-              <span :class="[action.iconBackground, action.iconForeground, 'rounded-lg inline-flex p-3 ring-4 ring-white']">
-                <component :is="action.icon" class="h-6 w-6" aria-hidden="true" />
-              </span>
+        <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none mx-72">
+          <div class="transition-all duration-200 flex flex-col rounded-lg shadow-lg hover:scale-105 hover:shadow-md overflow-hidden bg-primary">
+            <div class="flex-shrink-0 p-6">
+              <LightningBoltIcon class="h-24 w-full fill-accent" />
             </div>
-            <div class="mt-8">
-              <h3 class="text-lg font-medium">
-                <a :href="action.href" class="focus:outline-none">
-                  <!-- Extend touch target to entire panel -->
-                  <span class="absolute inset-0" aria-hidden="true" />
-                  {{ action.title }}
-                </a>
-              </h3>
-              <p class="mt-2 text-sm text-gray-500">Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.</p>
+            <div class="flex-1 p-6 flex flex-col justify-between text-center">
+              <div class="flex-1">
+                <div class="block mt-2">
+                  <p class="text-xl font-semibold text-white">
+                    Slash Commands
+                  </p>
+                  <p class="mt-3 text-base text-gray-300">
+                    Anya-Chan support the new Slash Commands system.
+                  </p>
+                </div>
+              </div>
             </div>
-            <span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400" aria-hidden="true">
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
-              </svg>
-            </span>
+          </div>
+
+          <div class="transition-all duration-200 flex flex-col rounded-lg shadow-lg hover:scale-105 hover:shadow-md overflow-hidden bg-primary">
+            <div class="flex-shrink-0 p-6">
+              <ClockIcon class="h-24 w-full fill-accent" />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between text-center">
+              <div class="flex-1">
+                <div class="block mt-2">
+                  <p class="text-xl font-semibold text-white">
+                    High Availability - 24/7
+                  </p>
+                  <p class="mt-3 text-base text-gray-300">
+                    Anya-Chan is available 24/7 and will always be there for you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="transition-all duration-200 flex flex-col rounded-lg shadow-lg hover:scale-105 hover:shadow-md overflow-hidden bg-primary">
+            <div class="flex-shrink-0 p-6">
+              <ShieldCheckIcon class="h-24 w-full fill-accent" />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between text-center">
+              <div class="flex-1">
+                <div class="block mt-2">
+                  <p class="text-xl font-semibold text-white">
+                    Frequent Updates
+                  </p>
+                  <p class="mt-3 text-base text-gray-300">
+                    Anya-Chan will always be updated with the latest features and commands.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -51,51 +82,5 @@
 </template>
 
 <script setup>
-import {
-  AcademicCapIcon,
-  BadgeCheckIcon,
-  CashIcon,
-  ClockIcon,
-  ReceiptRefundIcon,
-  UsersIcon,
-} from '@heroicons/vue/outline'
-
-const actions = [
-  {
-    title: 'Tweet',
-    href: '#',
-    icon: ClockIcon,
-    iconForeground: 'text-teal-700',
-    iconBackground: 'bg-teal-50',
-  },
-  {
-    title: 'Strawpoll',
-    href: '#',
-    icon: BadgeCheckIcon,
-    iconForeground: 'text-purple-700',
-    iconBackground: 'bg-purple-50',
-  },
-  {
-    title: 'Urban Dictionary',
-    href: '#',
-    icon: UsersIcon,
-    iconForeground: 'text-sky-700',
-    iconBackground: 'bg-sky-50',
-  },
-  { title: 'Fake user', href: '#', icon: CashIcon, iconForeground: 'text-yellow-700', iconBackground: 'bg-yellow-50' },
-  {
-    title: 'Google Text-to-Speech',
-    href: '#',
-    icon: ReceiptRefundIcon,
-    iconForeground: 'text-rose-700',
-    iconBackground: 'bg-rose-50',
-  },
-  {
-    title: 'Slash Commands',
-    href: '#',
-    icon: AcademicCapIcon,
-    iconForeground: 'text-indigo-700',
-    iconBackground: 'bg-indigo-50',
-  },
-]
+import { LightningBoltIcon, ClockIcon, ShieldCheckIcon } from '@heroicons/vue/solid'
 </script>

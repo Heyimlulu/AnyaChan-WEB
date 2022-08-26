@@ -6,10 +6,10 @@ const stats = [
 </script>
 
 <template>
-    <div class="bg-primary py-24">
+    <div id="Commands" class="bg-primary py-24">
         <div class="px-12 xl:px-[400px] text-center">
           <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div v-for="item in stats" :key="item.name" class="px-4 py-5 shadow rounded-lg overflow-hidden sm:p-6">
+            <div v-for="item in stats" :key="item.name" class="px-4 py-5 rounded-lg overflow-hidden sm:p-6">
               <dt class="text-sm font-medium text-gray-300 truncate">
                 {{ item.name }}
               </dt>
@@ -19,6 +19,7 @@ const stats = [
             </div>
           </dl>
         </div>
+
         <div class="my-16 sm:my-24 px-12 xl:px-[600px]">
           <h2 class="text-2xl tracking-tight font-bold text-white sm:text-3xl">All Commands</h2>
           <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
