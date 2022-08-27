@@ -1,70 +1,198 @@
 <script setup>
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
+import { ChevronUpIcon } from "@heroicons/vue/solid";
+
 const stats = [
-  { name: 'Total Servers', stat: '+100' },
-  { name: 'Total members', stat: '40000' },
-]
+  { name: "Total Servers", stat: "+100" },
+  { name: "Total members", stat: "40000" },
+];
+
+const commandsCategories = [
+  {
+    name: "Fun",
+    title: "Fun Commands",
+    commands: [
+      { name: "anilist", description: "Search for an anime on Anilist" },
+      {
+        name: "awesomecars",
+        description:
+          "Get a random Drip Car meme from https://awesomecars.neocities.org/",
+      },
+      { name: "cataas", description: "Find some cute cat pictures!" },
+      { name: "cute", description: "Cute-o-meter!" },
+      {
+        name: "dinoscomics",
+        description: "Replies with a random comic from Dinos and Comics.",
+      },
+      { name: "fakebot", description: "Fake a user or a bot!" },
+      { name: "gelbooru", description: "Free Anime and Hentai Gallery" },
+      {
+        name: "love",
+        description: "Calculate the love percentage between two users",
+      },
+      {
+        name: "openings",
+        description:
+          "Get a random anime opening or ending from https://openings.moe/",
+      },
+      {
+        name: "petittube",
+        description:
+          "Replies with a random video from https://petittube.com/. (Some videos may be NSFW so be careful!)",
+      },
+      {
+        name: "reddit",
+        description:
+          "Replies with a random image from the subreddit you chose!",
+      },
+      { name: "rps", description: "Play Rock-Paper-Scissor!" },
+      { name: "social", description: "Fetch cute image from waifu.pics!" },
+      { name: "tictactoe", description: "Play Tic-Tac-Toe!" },
+      {
+        name: "tts",
+        description: "Send you a mp3 file of what you wrote in chat",
+      },
+      { name: "tweet", description: "Send tweet to the bot twitter account" },
+    ],
+  },
+  {
+    name: "General",
+    title: "General Commands",
+    commands: [
+      { name: "8ball", description: "Ask the magic 8ball a question" },
+      { name: "advice", description: "Give you some useful advice" },
+      {
+        name: "choose",
+        description: "Randomly choose between the choices you provide.",
+      },
+      {
+        name: "doesntexist",
+        description: "Get a random image from thiscatdoesnotexist.com",
+      },
+      {
+        name: "explosm",
+        description: "Generate a random comic from Cyanide & Happiness",
+      },
+      {
+        name: "insult",
+        description: "Generate an insult from evilinsult.com",
+      },
+      { name: "roll", description: "Roll a dice" },
+      {
+        name: "say",
+        description: "Write something you want the bot to repeat",
+      },
+      {
+        name: "spoiler",
+        description: "Write something you want the bot to spoil",
+      },
+      { name: "steam", description: "Retrieve Steam user infos" },
+      { name: "strawpoll", description: "Create a poll" },
+      {
+        name: "urban",
+        description: "Search for slang words and phrases on Urban Dictionary",
+      },
+      {
+        name: "wikihow",
+        description: "Replies with a random wikihow article!",
+      },
+      {
+        name: "wikipedia",
+        description: "Replies with a random wikipedia article!",
+      },
+    ],
+  },
+  {
+    name: "Utility",
+    title: "Utility Commands",
+    commands: [
+      {
+        name: "about",
+        description: "Replies with some informations about the bot!",
+      },
+      {
+        name: "avatar",
+        description: "Replies with the avatar of the mentioned user.",
+      },
+      {
+        name: "color",
+        description: "Replies with a random color using hex!",
+      },
+      {
+        name: "download",
+        description: "Download videos from different website",
+      },
+      {
+        name: "help",
+        description: "Displays the list of commands for the bot",
+      },
+      {
+        name: "images",
+        description: "Retrieve all images found on the current channel!",
+      },
+      { name: "invite", description: "Invite me in your own server!" },
+      { name: "ping", description: "Replies with Pong!" },
+      { name: "serverinfo", description: "Replies with server info!" },
+      { name: "stats", description: "Show some stats about the bot" },
+      { name: "upvote", description: "Send you a link to vote for my bot" },
+      { name: "userinfo", description: "Replies with user info!" },
+    ],
+  },
+];
 </script>
 
 <template>
-    <section id="Commands" class="bg-primary py-24">
-        <div class="px-12 xl:px-[400px] text-center">
-          <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div v-for="item in stats" :key="item.name" class="px-4 py-5 rounded-lg overflow-hidden sm:p-6">
-              <dt class="text-sm font-medium text-gray-300 truncate">
-                {{ item.name }}
-              </dt>
-              <dd class="mt-1 text-5xl tracking-tight font-semibold text-white">
-                {{ item.stat }}
-              </dd>
-            </div>
-          </dl>
+  <section id="Commands" class="bg-primary py-24">
+    <div class="px-12 xl:px-[400px] text-center">
+      <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div
+          v-for="s in stats"
+          :key="s.name"
+          class="px-4 py-5 rounded-lg overflow-hidden sm:p-6"
+        >
+          <dt class="text-sm font-medium text-gray-300 truncate">
+            {{ s.name }}
+          </dt>
+          <dd class="mt-1 text-5xl tracking-tight font-semibold text-white">
+            {{ s.stat }}
+          </dd>
         </div>
+      </dl>
+    </div>
 
-        <div class="my-16 sm:my-24 px-12 xl:px-[600px]">
-          <h2 class="text-2xl tracking-tight font-bold text-white sm:text-3xl">All Commands</h2>
-          <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
-            <h2 id="accordion-flush-heading-1">
-              <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
-                <span>Fun Commands</span>
-                <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-            </h2>
-            <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-              <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-                <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+    <div class="w-full px-4 pt-16">
+      <div class="mx-auto w-full max-w-xl rounded-2xl bg-secondary p-8">
+        <Disclosure
+          v-for="category of commandsCategories"
+          :key="category.name"
+          as="div"
+          class="first-of-type:mt-0 mt-2"
+          v-slot="{ open }"
+        >
+          <DisclosureButton
+            class="flex w-full justify-between rounded-lg bg-accent p-4 text-left text-sm font-medium text-black hover:bg-accent/60 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+          >
+            <span>{{ category.title }}</span>
+            <ChevronUpIcon
+              :class="open ? 'rotate-180 transform' : ''"
+              class="h-5 w-5 text-black"
+            />
+          </DisclosureButton>
+          <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-300">
+            <div
+              v-for="command of category.commands"
+              :key="command.name"
+              class="flex justify-between items-center"
+            >
+              <div class="text-sm text-gray-300 my-0.5">
+                <span class="text-accent font-bold">/{{ command.name }}</span>
+                <span class="mx-2"> - </span>
+                <span>{{ command.description }}</span>
               </div>
             </div>
-            <h2 id="accordion-flush-heading-2">
-              <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-                <span>General Commands</span>
-                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-            </h2>
-            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-              <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-                <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-              </div>
-            </div>
-            <h2 id="accordion-flush-heading-3">
-              <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-                <span>Utility Commands</span>
-                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-            </h2>
-            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-              <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                  <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-                  <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
+          </DisclosurePanel>
+        </Disclosure>
+      </div>
+    </div>
+  </section>
 </template>

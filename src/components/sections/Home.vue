@@ -18,11 +18,11 @@
           </h1>
           <p class="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">A Discord bot with fully Slash Commands support</p>
           <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-            <div class="rounded-md shadow">
-              <a href="https://discord.com/api/oauth2/authorize?client_id=735858911093063773&permissions=421447199889&scope=applications.commands%20bot" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-accent hover:bg-accent/80 md:py-4 md:text-lg md:px-10"> Invite </a>
+            <div>
+              <a href="https://discord.com/api/oauth2/authorize?client_id=735858911093063773&permissions=421447199889&scope=applications.commands%20bot" class="w-full flex items-center justify-center px-8 py-3 border-none border-4 text-base font-bold rounded-md text-black bg-accent hover:bg-accent/80 shadow-md shadow-accent/40 hover:shadow-sm hover:shadow-accent/20 hover:top-0.5 md:py-4 md:text-lg md:px-10 active:top-1 active:shadow-none"> Invite </a>
             </div>
-            <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-              <a href="https://discord.gg/G43WEkkZ7w" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-300 md:py-4 md:text-lg md:px-10"> Support Server </a>
+            <div class="mt-3 sm:mt-0 sm:ml-3">
+              <a href="https://discord.gg/G43WEkkZ7w" class="w-full flex items-center justify-center px-8 py-3 relative border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-300 md:py-4 md:text-lg md:px-10"> Support Server </a>
             </div>
           </div>
         </div>
