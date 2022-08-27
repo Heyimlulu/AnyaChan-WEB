@@ -6,7 +6,7 @@ const stats = [
 </script>
 
 <template>
-    <div id="Commands" class="bg-primary py-24">
+    <section id="Commands" class="bg-primary py-24">
         <div class="px-12 xl:px-[400px] text-center">
           <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div v-for="item in stats" :key="item.name" class="px-4 py-5 rounded-lg overflow-hidden sm:p-6">
@@ -66,5 +66,5 @@ const stats = [
             </div>
           </div>
         </div>
-    </div>
+    </section>
 </template>

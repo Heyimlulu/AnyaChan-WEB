@@ -9,7 +9,7 @@
 </script>
 
 <template>
-    <div class="bg-primary py-24">
+    <section class="bg-primary py-24">
       <div class="my-16 mx-auto max-w-7xl px-4 sm:my-24">
         <div class="text-center">
           <img class="w-48 h-48 rounded-full mx-auto my-4 border-4 border-green-400 p-2" src="/assets/AnyaChan.png" alt="Discord bot avatar" />
@@ -27,5 +27,5 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 </template>
