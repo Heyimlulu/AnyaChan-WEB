@@ -142,7 +142,7 @@ const commandsCategories = [
 </script>
 
 <template>
-  <section id="Commands" class="bg-primary py-24">
+  <section id="commands" class="bg-primary py-24">
     <div class="px-12 xl:px-[400px] text-center">
       <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div
@@ -178,19 +178,28 @@ const commandsCategories = [
               class="h-5 w-5 text-black"
             />
           </DisclosureButton>
-          <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-300">
-            <div
-              v-for="command of category.commands"
-              :key="command.name"
-              class="flex justify-between items-center"
-            >
-              <div class="text-sm text-gray-300 my-0.5">
-                <span class="text-accent font-bold">/{{ command.name }}</span>
-                <span class="mx-2"> - </span>
-                <span>{{ command.description }}</span>
+          <transition
+            enter-active-class="transition duration-200 ease-out"
+            enter-from-class="transform opacity-0"
+            enter-to-class="transform opacity-100"
+            leave-active-class="transition duration-200 ease-out"
+            leave-from-class="transform opacity-100"
+            leave-to-class="transform opacity-0"
+          >
+            <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-300">
+              <div
+                v-for="command of category.commands"
+                :key="command.name"
+                class="flex justify-between items-center"
+              >
+                <div class="text-sm text-gray-300 my-0.5">
+                  <span class="text-accent font-bold">/{{ command.name }}</span>
+                  <span class="mx-2"> - </span>
+                  <span>{{ command.description }}</span>
+                </div>
               </div>
-            </div>
-          </DisclosurePanel>
+            </DisclosurePanel>
+          </transition>
         </Disclosure>
       </div>
     </div>

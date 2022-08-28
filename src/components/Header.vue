@@ -3,8 +3,8 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const navigation = [
-  { name: 'Features', href: '#Features', current: true },
-  { name: 'Commands', href: '#Commands', current: false }
+  { name: 'Features', href: '#features', current: true },
+  { name: 'Commands', href: '#commands', current: false }
 ]
 </script>
 
@@ -15,7 +15,8 @@ const navigation = [
         <div class="flex justify-between h-16">
           <div class="flex">
             <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'text-white border-b-2' : 'duration-200 text-white hover:text-white hover:opacity-80', 'inline-flex items-center px-1 pt-1 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+              <!-- <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'text-white border-b-2' : 'duration-200 text-white hover:text-white hover:opacity-80', 'inline-flex items-center px-1 pt-1 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a> -->
+              <router-link v-for="item in navigation" :key="item.name" :to="{path: '/', hash: item.href}" :class="[item.current ? 'text-white border-b-2' : 'duration-200 text-white hover:text-white hover:opacity-80', 'inline-flex items-center px-1 pt-1 text-sm font-medium']">{{ item.name }}</router-link>
             </div>
           </div>
           <div class="-mr-2 flex items-center sm:hidden">

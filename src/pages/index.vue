@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Home',
+  title: 'Anya-Chan | Discord Bot',
   description: 'This is the home page'
 })
 </script>

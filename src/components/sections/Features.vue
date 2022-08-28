@@ -1,5 +1,5 @@
 <template>
-    <section id="Features" class="bg-secondary py-24 relative">
+    <section id="features" class="bg-secondary py-24 relative">
         <div class="absolute top-0 w-full" style="overflow: hidden;">
           <svg
             preserveAspectRatio="none"

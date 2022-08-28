@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: '404',
+  title: 'Page not found',
   meta: [
     {
       name: 'description',
@@ -30,7 +30,7 @@ useHead({
 </style>
 
 <template>
-  <div class="min-h-full pt-16 pb-12 flex flex-col bg-primary">
+  <div class="min-h-full py-16 sm:py-24 flex flex-col bg-primary">
     <main class="flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex-shrink-0 flex justify-center">
           <span class="sr-only">Anya Forger</span>

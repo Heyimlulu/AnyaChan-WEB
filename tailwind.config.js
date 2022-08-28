@@ -1,18 +1,18 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts}'],
+  content: ["./index.html", "./src/**/*.{vue,js,ts}"],
   theme: {
     extend: {
       fontFamily: {
         sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: '#1d1d1e',
-        secondary: '#262626',
-        accent: '#fcddcd',
+        primary: "#1d1d1e",
+        secondary: "#262626",
+        accent: "#fcddcd",
         sky: colors.sky,
         teal: colors.teal,
         rose: colors.rose,
@@ -20,9 +20,9 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
-    require('@tailwindcss/aspect-ratio'),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/aspect-ratio"),
   ],
-}
+};
