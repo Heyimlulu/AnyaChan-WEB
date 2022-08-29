@@ -2,10 +2,10 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 
-const navigation = [
-  { name: 'Features', href: '#features' },
-  { name: 'Commands', href: '#commands'}
-]
+// const navigation = [
+//   { name: 'Features', href: '#features' },
+//   { name: 'Commands', href: '#commands'}
+// ]
 </script>
 
 <template>

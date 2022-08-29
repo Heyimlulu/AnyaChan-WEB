@@ -53,7 +53,7 @@ import { LightningBoltIcon, ClockIcon, ShieldCheckIcon } from '@heroicons/vue/so
 const features = [
   {
     title: 'Slash Commands',
-    description: 'Anya-Chan support the new Slash Commands system.',
+    description: 'Anya-Chan support the new Discord Slash commands feature.',
     icon: LightningBoltIcon
   },
   {

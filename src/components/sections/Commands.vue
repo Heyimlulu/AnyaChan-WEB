@@ -181,6 +181,9 @@ const commandsCategories = [
     </div>
 
     <div class="w-full px-4 pt-16">
+      <h2 class="text-3xl text-center font-semibold text-white my-2">
+        All Command
+      </h2>
       <div class="mx-auto w-full max-w-xl rounded-2xl bg-secondary p-8">
         <Disclosure
           v-for="category of commandsCategories"
