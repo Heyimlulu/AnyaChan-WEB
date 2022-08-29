@@ -3,8 +3,8 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { ChevronUpIcon } from "@heroicons/vue/solid";
 
 const stats = [
-  { name: "Total Servers", stat: "+100" },
-  { name: "Total members", stat: "40000" },
+  { name: "Total Servers", stat: "+90" },
+  { name: "Total members", stat: "+30000" },
 ];
 
 const commandsCategories = [
@@ -141,6 +141,26 @@ const commandsCategories = [
 ];
 </script>
 
+<script>
+// import api from '../../services/api'
+
+// export default {
+//   data: () => {
+//     return {
+//       botstats: [],
+//     }
+//   },
+//   methods: {
+//     async getStats() {
+//       this.botstats = await api.getBotStats();
+//     }
+//   },
+//   mounted() {
+//     this.getStats()
+//   }
+// }
+</script>
+
 <template>
   <section id="commands" class="bg-primary py-24">
     <div class="px-12 xl:px-[400px] text-center">
@@ -153,7 +173,7 @@ const commandsCategories = [
           <dt class="text-sm font-medium text-gray-300 truncate">
             {{ s.name }}
           </dt>
-          <dd class="mt-1 text-5xl tracking-tight font-semibold text-white">
+          <dd class="mt-1 text-5xl tracking-tight font-semibold text-accent">
             {{ s.stat }}
           </dd>
         </div>
