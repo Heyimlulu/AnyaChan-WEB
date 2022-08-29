@@ -1,5 +1,6 @@
 import HomePage from "../pages/index.vue";
 import TermsOfServices from "../pages/Terms-of-Service.vue";
+import PageNotFound from "../pages/PageNotFound.vue"
 
 const routes = [
     {
@@ -12,6 +13,10 @@ const routes = [
         name: "Terms Of Services",
         component: TermsOfServices,
     },
+    {
+        path: "/:path(.*)",
+        component: PageNotFound,
+    }
 ];
 
 export default routes;
