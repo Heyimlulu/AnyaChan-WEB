@@ -29,11 +29,11 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
           </div>
           <div class="-mr-2 flex items-center sm:hidden">
             <!-- Mobile menu button -->
-            <DisclosureButton class="bg-primary inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none">
+            <!-- <DisclosureButton class="bg-primary inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none">
               <span class="sr-only">Open main menu</span>
               <MenuIcon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
               <XIcon v-else class="block h-6 w-6" aria-hidden="true" />
-            </DisclosureButton>
+            </DisclosureButton> -->
           </div>
         </div>
       </div>
