@@ -4,7 +4,8 @@ import { ChevronUpIcon } from "@heroicons/vue/solid";
 
 const stats = [
   { name: "Total Servers", stat: "+90" },
-  { name: "Total members", stat: "+30000" },
+  // { name: "Total members", stat: "+30000" },
+  { name: "Total Commands", stat: "+40" }
 ];
 
 const commandsCategories = [
