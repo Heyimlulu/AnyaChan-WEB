@@ -1,10 +1,11 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
-import { ChevronUpIcon } from "@heroicons/vue/solid";
+import { ChevronUpIcon, BadgeCheckIcon } from "@heroicons/vue/solid";
 
 const stats = [
   { name: "Total Servers", stat: "+90" },
-  // { name: "Total members", stat: "+30000" },
+  { name: "Total members", stat: "+30000" },
+  { name: "Verified", icon: BadgeCheckIcon },
   { name: "Total Commands", stat: "+40" }
 ];
 
@@ -74,10 +75,6 @@ const commandsCategories = [
         name: "explosm",
         description: "Generate a random comic from Cyanide & Happiness",
       },
-      {
-        name: "insult",
-        description: "Generate an insult from evilinsult.com",
-      },
       { name: "roll", description: "Roll a dice" },
       {
         name: "say",
@@ -146,7 +143,7 @@ const commandsCategories = [
 // import api from '../../services/api'
 
 // export default {
-//   data: () => {
+//   data () {
 //     return {
 //       botstats: [],
 //     }
@@ -157,7 +154,7 @@ const commandsCategories = [
 //     }
 //   },
 //   mounted() {
-//     this.getStats()
+//     this.getStats();
 //   }
 // }
 </script>
@@ -171,11 +168,12 @@ const commandsCategories = [
           :key="s.name"
           class="px-4 py-5 rounded-lg overflow-hidden sm:p-6"
         >
-          <dt class="text-sm font-medium text-gray-300 truncate">
+          <dt class="text-xl font-medium text-gray-300 truncate">
             {{ s.name }}
           </dt>
           <dd class="mt-1 text-5xl tracking-tight font-semibold text-accent">
-            {{ s.stat }}
+            <component v-if="s.icon" :is="s.icon" class="h-16 w-16 mx-auto" />
+            <span v-else>{{ s.stat }}</span>
           </dd>
         </div>
       </dl>
@@ -217,7 +215,7 @@ const commandsCategories = [
                 class="flex justify-between items-center"
               >
                 <div class="text-sm text-gray-300 my-0.5">
-                  <span class="text-accent font-bold">/{{ command.name }}</span>
+                  <span class="text-accent font-semibold">/{{ command.name }}</span>
                   <span class="mx-2"> - </span>
                   <span>{{ command.description }}</span>
                 </div>
