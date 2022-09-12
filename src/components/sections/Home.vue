@@ -12,7 +12,7 @@
     <section class="bg-primary py-24">
       <div class="my-16 mx-auto max-w-7xl px-4 sm:my-24">
         <div class="text-center">
-          <img class="w-48 h-48 rounded-full mx-auto my-4 border-4 border-accent p-2" src="/assets/AnyaChan.png" alt="Discord bot avatar" />
+          <img class="w-48 md:w-72 h-48 md:h-72 rounded-full mx-auto my-4 border-4 border-[#99cccc] p-2 md:hover:scale-105 transition-all duration-300" src="/assets/logo.jpg" alt="Discord bot avatar" />
           <h1 class="text-4xl tracking-tight font-semibold text-gray-900 sm:text-5xl sm:tracking-tight md:text-6xl md:tracking-tight">
             <span class="block xl:inline text-white">Anya-Chan</span>
           </h1>
