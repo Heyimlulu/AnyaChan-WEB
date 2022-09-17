@@ -11,7 +11,7 @@ const routes = [
     },
     {
         path: "/terms-of-service",
-        name: "Terms Of Services",
+        name: "Terms Of Service",
         component: TermsOfServices,
     },
     {

@@ -160,7 +160,7 @@ const commandsCategories = [
 </script>
 
 <template>
-  <section id="commands" class="md:h-screen bg-primary py-24">
+  <section id="commands" class="bg-primary py-24">
     <div class="px-12 xl:px-[400px] text-center">
       <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div
