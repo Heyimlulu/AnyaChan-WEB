@@ -160,7 +160,7 @@ const commandsCategories = [
 </script>
 
 <template>
-  <section id="commands" class="bg-primary py-24">
+  <section id="commands" class="md:h-screen bg-primary py-24">
     <div class="px-12 xl:px-[400px] text-center">
       <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div
@@ -180,7 +180,7 @@ const commandsCategories = [
     </div>
 
     <div class="w-full px-4 pt-16">
-      <h2 class="text-3xl text-center font-semibold text-white my-2">
+      <h2 class="text-4xl text-center font-semibold text-white mb-8">
         All Command
       </h2>
       <div class="mx-auto w-full max-w-xl rounded-2xl bg-secondary p-8">

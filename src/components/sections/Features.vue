@@ -1,5 +1,5 @@
 <template>
-    <section id="features" class="bg-secondary py-24 relative">
+    <section id="features" class="md:h-screen md:flex md:items-center md:justify-center bg-secondary py-24 relative">
         <div class="absolute top-0 w-full" style="overflow: hidden;">
           <svg
             preserveAspectRatio="none"
@@ -12,7 +12,7 @@
         </div>
 
         <div class="my-24">
-          <h2 class="text-center text-3xl tracking-tight font-semibold text-white sm:text-4xl">Bot Features</h2>
+          <h2 class="text-center text-4xl tracking-tight font-semibold text-white sm:text-5xl">Bot Features</h2>
           <div class="my-12 max-w-lg grid gap-5 grid-cols-1 lg:grid-cols-3 lg:max-w-none mx-auto px-6 lg:px-16 xl:px-48">
             <div v-for="feature in features" :key="feature.title" class="transition-all duration-200 flex flex-col rounded-lg shadow-lg md:hover:scale-105 md:hover:shadow-md overflow-hidden bg-primary">
               <div class="flex-shrink-0 p-6">
