@@ -134,6 +134,7 @@ const commandsCategories = [
       { name: "stats", description: "Show some stats about the bot" },
       { name: "upvote", description: "Send you a link to vote for my bot" },
       { name: "userinfo", description: "Replies with user info!" },
+      { name: "patreon", description: "Link to the bot\'s patreon page" }
     ],
   },
 ];
