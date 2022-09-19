@@ -14,7 +14,7 @@
     <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
       <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
         <div v-for="item in navigation" :key="item.name" class="px-5 py-2">
-          <a :href="item.href" class="text-base text-gray-300 hover:text-gray-400">{{ item.name }}</a>
+          <a :href="item.href" :target="item.target && item.target" :rel="item.rel && item.rel" class="text-base text-gray-300 hover:text-gray-400">{{ item.name }}</a>
         </div>
       </nav>
       <div class="mt-8 flex justify-center space-x-6">
@@ -33,13 +33,25 @@ import { defineComponent, h } from 'vue'
 
 const navigation = [
   {
+      name: 'Patreon',
+      href: 'https://www.patreon.com/luludev',
+      target: '_blank',
+      rel: 'noopener noreferrer'
+  },
+  {
+      name: 'Top.gg',
+      href: 'https://top.gg/bot/735858911093063773',
+      target: '_blank',
+      rel: 'noopener noreferrer'
+  },
+  {
       name: 'Privacy Policy',
       href: '/privacy-policy'
   },
   {
       name: 'Terms of Service',
       href: '/terms-of-service'
-  }
+  },
 ]
 
 const social = [

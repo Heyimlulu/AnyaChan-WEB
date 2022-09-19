@@ -174,7 +174,7 @@
       </p>
       <p>
         If you wish to request your datas or have it deleted please contact me
-        on Discord: Lυlυ#1337 (265896171384340480).
+        on Discord: Lυlυ#1337.
       </p>
     </div>
   </div>
