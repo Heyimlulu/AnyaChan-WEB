@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden bg-primary py-24 px-6">
+  <div class="relative overflow-hidden bg-primary py-48 px-6">
     <div class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full">
       <div
         class="relative mx-auto h-full max-w-prose text-lg"
@@ -143,7 +143,7 @@
       </p>
       <h1 class="text-white">What do Anya-Chan store</h1>
       <ul>
-        <li>
+        <!-- <li>
           <p>
             Discord user ID (Needed for logging purposes and making sure the bot
             is used correctly. I.E.: commands)
@@ -160,7 +160,7 @@
             Channel ID (Used to send message for the welcome and leave messages
             features)
           </p>
-        </li>
+        </li> -->
         <li>
           <p>Interaction ID / Message content</p>
         </li>

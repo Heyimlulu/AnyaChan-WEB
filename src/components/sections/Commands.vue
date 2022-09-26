@@ -3,8 +3,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { ChevronUpIcon, BadgeCheckIcon } from "@heroicons/vue/solid";
 
 const stats = [
-  { name: "Total Servers", stat: "+90" },
-  { name: "Total members", stat: "+30000" },
+  { name: "Total Servers", stat: "+100" },
   { name: "Verified", icon: BadgeCheckIcon },
   { name: "Total Commands", stat: "+40" }
 ];
@@ -163,7 +162,7 @@ const commandsCategories = [
 <template>
   <section id="commands" class="bg-primary py-24">
     <div class="px-12 xl:px-[400px] text-center">
-      <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
+      <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
         <div
           v-for="s in stats"
           :key="s.name"

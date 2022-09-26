@@ -6,7 +6,7 @@ useHead({
 </script>
 
 <template>
-  <div class="relative overflow-hidden bg-primary py-24">
+  <div class="relative overflow-hidden bg-primary py-48">
     <div class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full">
       <div
         class="relative mx-auto h-full max-w-prose text-lg"
