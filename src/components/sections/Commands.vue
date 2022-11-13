@@ -10,132 +10,225 @@ const stats = [
 
 const commandsCategories = [
   {
-    name: "Fun",
-    title: "Fun Commands",
-    commands: [
-      { name: "anilist", description: "Search for an anime on Anilist" },
+    "name": "Admin",
+    "title": "Admin Commands",
+    "commands": [
       {
-        name: "awesomecars",
-        description:
-          "Get a random Drip Car meme from https://awesomecars.neocities.org/",
-      },
-      { name: "cataas", description: "Find some cute cat pictures!" },
-      { name: "cute", description: "Cute-o-meter!" },
-      {
-        name: "dinoscomics",
-        description: "Replies with a random comic from Dinos and Comics.",
-      },
-      { name: "fakebot", description: "Fake a user or a bot!" },
-      { name: "gelbooru", description: "Free Anime and Hentai Gallery" },
-      {
-        name: "love",
-        description: "Calculate the love percentage between two users",
+        "name": "ban",
+        "description": "Bans a user from the server (Admin only)"
       },
       {
-        name: "openings",
-        description:
-          "Get a random anime opening or ending from https://openings.moe/",
+        "name": "bye",
+        "description": "Set a leave message for your server (Admin only)"
       },
       {
-        name: "petittube",
-        description:
-          "Replies with a random video from https://petittube.com/. (Some videos may be NSFW so be careful!)",
+        "name": "kick",
+        "description": "Kicks a user from the server (Admin only)"
       },
       {
-        name: "reddit",
-        description:
-          "Replies with a random image from the subreddit you chose!",
-      },
-      { name: "rps", description: "Play Rock-Paper-Scissor!" },
-      { name: "social", description: "Fetch cute image from waifu.pics!" },
-      { name: "tictactoe", description: "Play Tic-Tac-Toe!" },
-      {
-        name: "tts",
-        description: "Send you a mp3 file of what you wrote in chat",
-      },
-      { name: "tweet", description: "Send tweet to the bot twitter account" },
-    ],
+        "name": "welcome",
+        "description": "Set a welcome message for your server (Admin only)"
+      }
+    ]
   },
   {
-    name: "General",
-    title: "General Commands",
-    commands: [
-      { name: "8ball", description: "Ask the magic 8ball a question" },
-      { name: "advice", description: "Give you some useful advice" },
+    "name": "Fun",
+    "title": "Fun Commands",
+    "commands": [
       {
-        name: "choose",
-        description: "Randomly choose between the choices you provide.",
+        "name": "achievements",
+        "description": "Generate a custom Minecraft achievement"
       },
       {
-        name: "doesntexist",
-        description: "Get a random image from thiscatdoesnotexist.com",
+        "name": "anilist",
+        "description": "Search for an anime on Anilist"
       },
       {
-        name: "explosm",
-        description: "Generate a random comic from Cyanide & Happiness",
-      },
-      { name: "roll", description: "Roll a dice" },
-      {
-        name: "say",
-        description: "Write something you want the bot to repeat",
+        "name": "awesomecars",
+        "description": "Get a random Drip Car meme from https://awesomecars.neocities.org/"
       },
       {
-        name: "spoiler",
-        description: "Write something you want the bot to spoil",
-      },
-      { name: "steam", description: "Retrieve Steam user infos" },
-      { name: "strawpoll", description: "Create a poll" },
-      {
-        name: "urban",
-        description: "Search for slang words and phrases on Urban Dictionary",
+        "name": "cardhighlow",
+        "description": "Guess if the next card will be higher or lower than the previous one"
       },
       {
-        name: "wikihow",
-        description: "Replies with a random wikihow article!",
+        "name": "cataas",
+        "description": "Find some cute cat pictures!"
       },
       {
-        name: "wikipedia",
-        description: "Replies with a random wikipedia article!",
+        "name": "cute",
+        "description": "Cute-o-meter!"
       },
-    ],
+      {
+        "name": "dinoscomics",
+        "description": "Replies with a random comic from Dinos and Comics."
+      },
+      {
+        "name": "fakebot",
+        "description": "Fake a user or a bot!"
+      },
+      {
+        "name": "gelbooru",
+        "description": "Free Anime and Hentai Gallery"
+      },
+      {
+        "name": "love",
+        "description": "Calculate the love percentage between two users"
+      },
+      {
+        "name": "openings",
+        "description": "Get a random anime opening or ending from https://openings.moe/"
+      },
+      {
+        "name": "petittube",
+        "description": "Replies with a random video from https://petittube.com/. (Some videos may be NSFW so be careful!)"
+      },
+      {
+        "name": "reddit",
+        "description": "Replies with a random image from the subreddit you chose!"
+      },
+      {
+        "name": "rps",
+        "description": "Play Rock-Paper-Scissor!"
+      },
+      {
+        "name": "social",
+        "description": "Fetch cute image from waifu.pics!"
+      },
+      {
+        "name": "tictactoe",
+        "description": "Play Tic-Tac-Toe!"
+      },
+      {
+        "name": "tts",
+        "description": "Send you a mp3 file of what you wrote in chat"
+      },
+      {
+        "name": "tweet",
+        "description": "Send tweet to the bot twitter account"
+      }
+    ]
   },
   {
-    name: "Utility",
-    title: "Utility Commands",
-    commands: [
+    "name": "General",
+    "title": "General Commands",
+    "commands": [
       {
-        name: "about",
-        description: "Replies with some informations about the bot!",
+        "name": "8ball",
+        "description": "Ask the magic 8ball a question"
       },
       {
-        name: "avatar",
-        description: "Replies with the avatar of the mentioned user.",
+        "name": "dodocodes",
+        "description": "Get a Dodo Code from the ACNH community!"
       },
       {
-        name: "color",
-        description: "Replies with a random color using hex!",
+        "name": "advice",
+        "description": "Give you some useful advice"
       },
       {
-        name: "download",
-        description: "Download videos from different website",
+        "name": "choose",
+        "description": "Randomly choose between the choices you provide."
       },
       {
-        name: "help",
-        description: "Displays the list of commands for the bot",
+        "name": "doesntexist",
+        "description": "Get a random image from thiscatdoesnotexist.com"
       },
       {
-        name: "images",
-        description: "Retrieve all images found on the current channel!",
+        "name": "roll",
+        "description": "Roll a dice"
       },
-      { name: "invite", description: "Invite me in your own server!" },
-      { name: "ping", description: "Replies with Pong!" },
-      { name: "serverinfo", description: "Replies with server info!" },
-      { name: "stats", description: "Show some stats about the bot" },
-      { name: "upvote", description: "Send you a link to vote for my bot" },
-      { name: "userinfo", description: "Replies with user info!" },
-      { name: "patreon", description: "Link to the bot\'s patreon page" }
-    ],
+      {
+        "name": "say",
+        "description": "Write something you want the bot to repeat"
+      },
+      {
+        "name": "spoiler",
+        "description": "Write something you want the bot to spoil"
+      },
+      {
+        "name": "steam",
+        "description": "Retrieve Steam user infos"
+      },
+      {
+        "name": "strawpoll",
+        "description": "Create a poll"
+      },
+      {
+        "name": "urban",
+        "description": "Search for slang words and phrases on Urban Dictionary"
+      },
+      {
+        "name": "wikihow",
+        "description": "Replies with a random wikihow article!"
+      },
+      {
+        "name": "wikipedia",
+        "description": "Replies with a random wikipedia article!"
+      }
+    ]
   },
+  {
+    "name": "Utility",
+    "title": "Utility Commands",
+    "commands": [
+      {
+        "name": "about",
+        "description": "Replies with some informations about the bot!"
+      },
+      {
+        "name": "avatar",
+        "description": "Replies with the avatar of the mentioned user."
+      },
+      {
+        "name": "color",
+        "description": "Replies with a random color using hex!"
+      },
+      {
+        "name": "download",
+        "description": "Download videos from different website"
+      },
+      {
+        "name": "help",
+        "description": "Displays the list of commands for the bot"
+      },
+      {
+        "name": "images",
+        "description": "Retrieve all images found on the current channel!"
+      },
+      {
+        "name": "invite",
+        "description": "Invite links for the bot"
+      },
+      {
+        "name": "patreon",
+        "description": "Link to the bot's patreon page"
+      },
+      {
+        "name": "ping",
+        "description": "Replies with Pong!"
+      },
+      {
+        "name": "serverinfo",
+        "description": "Replies with server info!"
+      },
+      {
+        "name": "stats",
+        "description": "Show some stats about the bot"
+      },
+      {
+        "name": "tracemoe",
+        "description": "Search an Anime by image for the exact scene."
+      },
+      {
+        "name": "upvote",
+        "description": "Send you a link to vote for my bot"
+      },
+      {
+        "name": "userinfo",
+        "description": "Replies with user info!"
+      }
+    ]
+  }
 ];
 </script>
 
