@@ -113,7 +113,7 @@
       <div class="mx-auto max-w-prose text-lg">
         <h1>
           <span class="block text-center text-lg font-semibold text-accent"
-            >Last updated: August 31, 2022</span
+            >Last updated: November 13, 2022</span
           >
           <span
             class="
@@ -143,24 +143,21 @@
       </p>
       <h1 class="text-white">What do Anya-Chan store</h1>
       <ul>
-        <!-- <li>
+        <li>
           <p>
-            Discord user ID (Needed for logging purposes and making sure the bot
-            is used correctly. I.E.: commands)
+            Discord user ID (Needed for logging purposes)
           </p>
         </li>
         <li>
           <p>
-            Guild ID (Needed for moderation purposes created by commands. I.E.:
-            welcome and leave commands)
+            Guild ID (Needed for moderation purposes created with the "welcome" and "leave" commands)
           </p>
         </li>
         <li>
           <p>
-            Channel ID (Used to send message for the welcome and leave messages
-            features)
+            Channel ID (Used to send message in a channel)
           </p>
-        </li> -->
+        </li>
         <li>
           <p>Interaction ID / Message content</p>
         </li>
@@ -170,7 +167,7 @@
       </p>
       <p>
         The logs created from the message / interaction ID are deleted
-        periodically.
+        periodically. (every 30 days)
       </p>
       <p>
         If you wish to request your datas or have it deleted please contact me
