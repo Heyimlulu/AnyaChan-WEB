@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --accent-color: #fcddcd;
-    --accent-color-dark: rgba(252, 221, 205, .6);
+    --accent-color: #99cccc;
+    --accent-color-dark: rgba(153, 204, 204, .6);
 }
 
 /* scroll bar */

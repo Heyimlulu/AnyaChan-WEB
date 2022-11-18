@@ -3,9 +3,9 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { ChevronUpIcon, BadgeCheckIcon } from "@heroicons/vue/solid";
 
 const stats = [
-  { name: "Total Servers", stat: "+100" },
+  { name: "Total Servers", stat: "+150" },
   { name: "Verified", icon: BadgeCheckIcon },
-  { name: "Total Commands", stat: "+40" }
+  { name: "Total Commands", stat: "+50" }
 ];
 
 const commandsCategories = [
