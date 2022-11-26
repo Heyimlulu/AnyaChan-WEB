@@ -33,8 +33,8 @@ import { defineComponent, h } from 'vue'
 
 const navigation = [
   {
-      name: 'Patreon',
-      href: 'https://www.patreon.com/luludev',
+      name: 'Ko-fi',
+      href: 'https://ko-fi.com/heyimlulu',
       target: '_blank',
       rel: 'noopener noreferrer'
   },
