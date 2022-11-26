@@ -1,28 +1,43 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { ChevronUpIcon, BadgeCheckIcon } from "@heroicons/vue/solid";
-
-const stats = [
-  { name: "Total Servers", stat: "+150" },
-  { name: "Verified", icon: BadgeCheckIcon },
-  { name: "Total Commands", stat: "+50" }
-];
-
 </script>
 
 <script>
 import { ref } from 'vue'
 import {commandsList} from "../../models/commandsList";
+import axios from 'axios';
 
 export default {
   name: "Commands",
   data () {
     return {
       commands: [],
+      botstats: null,
     }
   },
   mounted() {
     this.commands = ref(commandsList)
+    axios.get('http://150.136.137.28:7700/api/stats').then(response => {
+      this.botstats = [
+        {
+          name: "Total Servers",
+          value: response.data.guilds || '-',
+        },
+        {
+          name: "Total Users",
+          value: response.data.users || '-',
+        },
+        {
+          name: "Total Commands",
+          value: response.data.commands || '-',
+        },
+        {
+          name: "Verified",
+          icon: BadgeCheckIcon
+        },
+      ]
+    });
   }
 }
 </script>
@@ -30,9 +45,9 @@ export default {
 <template>
   <section id="commands" class="bg-primary py-24">
     <div class="px-12 xl:px-[400px] text-center">
-      <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
+      <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-4">
         <div
-          v-for="s in stats"
+          v-for="s in botstats"
           :key="s.name"
           class="px-4 py-5 rounded-lg overflow-hidden sm:p-6"
         >
@@ -41,7 +56,7 @@ export default {
           </dt>
           <dd class="mt-1 text-5xl tracking-tight font-semibold text-accent">
             <component v-if="s.icon" :is="s.icon" class="h-16 w-16 mx-auto" />
-            <span v-else>{{ s.stat }}</span>
+            <span v-else>{{ s.value }}</span>
           </dd>
         </div>
       </dl>

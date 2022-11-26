@@ -1,13 +1,9 @@
 import axios from 'axios';
 
-export default class Api {
+class Api {
 
     static getBotStats() {
-        axios.get('https://top.gg/api/bots/735858911093063773/stats', {
-            headers: {
-                'Authorization': `${import.meta.env.VITE_TOPGG_AUTH_TOKEN}`
-            }
-        }).then(response => {
+        axios.get('http://150.136.137.28:7700/api/stats').then(response => {
             return response.data;
         }).catch(error => {
             console.log(error);
@@ -15,3 +11,5 @@ export default class Api {
     }
 
 }
+
+export default Api;
