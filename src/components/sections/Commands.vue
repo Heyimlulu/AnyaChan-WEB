@@ -8,248 +8,23 @@ const stats = [
   { name: "Total Commands", stat: "+50" }
 ];
 
-const commandsCategories = [
-  {
-    "name": "Admin",
-    "title": "Admin Commands",
-    "commands": [
-      {
-        "name": "ban",
-        "description": "Bans a user from the server (Admin only)"
-      },
-      {
-        "name": "bye",
-        "description": "Set a leave message for your server (Admin only)"
-      },
-      {
-        "name": "kick",
-        "description": "Kicks a user from the server (Admin only)"
-      },
-      {
-        "name": "welcome",
-        "description": "Set a welcome message for your server (Admin only)"
-      }
-    ]
-  },
-  {
-    "name": "Fun",
-    "title": "Fun Commands",
-    "commands": [
-      {
-        "name": "achievements",
-        "description": "Generate a custom Minecraft achievement"
-      },
-      {
-        "name": "anilist",
-        "description": "Search for an anime on Anilist"
-      },
-      {
-        "name": "awesomecars",
-        "description": "Get a random Drip Car meme from https://awesomecars.neocities.org/"
-      },
-      {
-        "name": "cardhighlow",
-        "description": "Guess if the next card will be higher or lower than the previous one"
-      },
-      {
-        "name": "cataas",
-        "description": "Find some cute cat pictures!"
-      },
-      {
-        "name": "cute",
-        "description": "Cute-o-meter!"
-      },
-      {
-        "name": "dinoscomics",
-        "description": "Replies with a random comic from Dinos and Comics."
-      },
-      {
-        "name": "fakebot",
-        "description": "Fake a user or a bot!"
-      },
-      {
-        "name": "gelbooru",
-        "description": "Free Anime and Hentai Gallery"
-      },
-      {
-        "name": "love",
-        "description": "Calculate the love percentage between two users"
-      },
-      {
-        "name": "openings",
-        "description": "Get a random anime opening or ending from https://openings.moe/"
-      },
-      {
-        "name": "petittube",
-        "description": "Replies with a random video from https://petittube.com/. (Some videos may be NSFW so be careful!)"
-      },
-      {
-        "name": "reddit",
-        "description": "Replies with a random image from the subreddit you chose!"
-      },
-      {
-        "name": "rps",
-        "description": "Play Rock-Paper-Scissor!"
-      },
-      {
-        "name": "social",
-        "description": "Fetch cute image from waifu.pics!"
-      },
-      {
-        "name": "tictactoe",
-        "description": "Play Tic-Tac-Toe!"
-      },
-      {
-        "name": "tts",
-        "description": "Send you a mp3 file of what you wrote in chat"
-      },
-      {
-        "name": "tweet",
-        "description": "Send tweet to the bot twitter account"
-      }
-    ]
-  },
-  {
-    "name": "General",
-    "title": "General Commands",
-    "commands": [
-      {
-        "name": "8ball",
-        "description": "Ask the magic 8ball a question"
-      },
-      {
-        "name": "dodocodes",
-        "description": "Get a Dodo Code from the ACNH community!"
-      },
-      {
-        "name": "advice",
-        "description": "Give you some useful advice"
-      },
-      {
-        "name": "choose",
-        "description": "Randomly choose between the choices you provide."
-      },
-      {
-        "name": "doesntexist",
-        "description": "Get a random image from thiscatdoesnotexist.com"
-      },
-      {
-        "name": "roll",
-        "description": "Roll a dice"
-      },
-      {
-        "name": "say",
-        "description": "Write something you want the bot to repeat"
-      },
-      {
-        "name": "spoiler",
-        "description": "Write something you want the bot to spoil"
-      },
-      {
-        "name": "steam",
-        "description": "Retrieve Steam user infos"
-      },
-      {
-        "name": "strawpoll",
-        "description": "Create a poll"
-      },
-      {
-        "name": "urban",
-        "description": "Search for slang words and phrases on Urban Dictionary"
-      },
-      {
-        "name": "wikihow",
-        "description": "Replies with a random wikihow article!"
-      },
-      {
-        "name": "wikipedia",
-        "description": "Replies with a random wikipedia article!"
-      }
-    ]
-  },
-  {
-    "name": "Utility",
-    "title": "Utility Commands",
-    "commands": [
-      {
-        "name": "about",
-        "description": "Replies with some informations about the bot!"
-      },
-      {
-        "name": "avatar",
-        "description": "Replies with the avatar of the mentioned user."
-      },
-      {
-        "name": "color",
-        "description": "Replies with a random color using hex!"
-      },
-      {
-        "name": "download",
-        "description": "Download videos from different website"
-      },
-      {
-        "name": "help",
-        "description": "Displays the list of commands for the bot"
-      },
-      {
-        "name": "images",
-        "description": "Retrieve all images found on the current channel!"
-      },
-      {
-        "name": "invite",
-        "description": "Invite links for the bot"
-      },
-      {
-        "name": "patreon",
-        "description": "Link to the bot's patreon page"
-      },
-      {
-        "name": "ping",
-        "description": "Replies with Pong!"
-      },
-      {
-        "name": "serverinfo",
-        "description": "Replies with server info!"
-      },
-      {
-        "name": "stats",
-        "description": "Show some stats about the bot"
-      },
-      {
-        "name": "tracemoe",
-        "description": "Search an Anime by image for the exact scene."
-      },
-      {
-        "name": "upvote",
-        "description": "Send you a link to vote for my bot"
-      },
-      {
-        "name": "userinfo",
-        "description": "Replies with user info!"
-      }
-    ]
-  }
-];
 </script>
 
 <script>
-// import api from '../../services/api'
+import { ref } from 'vue'
+import {commandsList} from "../../models/commandsList";
 
-// export default {
-//   data () {
-//     return {
-//       botstats: [],
-//     }
-//   },
-//   methods: {
-//     async getStats() {
-//       this.botstats = await api.getBotStats();
-//     }
-//   },
-//   mounted() {
-//     this.getStats();
-//   }
-// }
+export default {
+  name: "Commands",
+  data () {
+    return {
+      commands: [],
+    }
+  },
+  mounted() {
+    this.commands = ref(commandsList)
+  }
+}
 </script>
 
 <template>
@@ -278,7 +53,7 @@ const commandsCategories = [
       </h2>
       <div class="mx-auto w-full max-w-xl rounded-2xl bg-secondary p-8">
         <Disclosure
-          v-for="category of commandsCategories"
+          v-for="category of commands"
           :key="category.name"
           as="div"
           class="first-of-type:mt-0 mt-2"
@@ -305,12 +80,23 @@ const commandsCategories = [
               <div
                 v-for="command of category.commands"
                 :key="command.name"
-                class="flex justify-between items-center"
+                class="my-2"
               >
                 <div class="text-sm text-gray-300 my-0.5">
-                  <span class="text-accent font-semibold">/{{ command.name }}</span>
+                  <span class="text-white font-semibold">/{{ command.name }}</span>
                   <span class="mx-2"> - </span>
                   <span>{{ command.description }}</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-sm text-gray-300 mr-2">Usage:</span>
+                  <span class="text-analoggreen font-semibold">/{{ command.name }}</span>
+                  <span class="text-sm text-gray-300 mx-2" v-for="opt of command.options" :key="opt.name">
+                    <span :class="opt.required ? 'text-accent font-semibold' : 'text-white'">
+                      <span class="text-analogteal">[</span>
+                      {{ opt.name }}
+                      <span class="text-analogteal">]</span>
+                    </span>
+                  </span>
                 </div>
               </div>
             </DisclosurePanel>
