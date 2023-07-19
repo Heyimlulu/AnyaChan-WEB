@@ -38,13 +38,7 @@
           />
         </svg>
         <svg
-          class="
-            absolute
-            top-1/2
-            right-full
-            -translate-y-1/2 -translate-x-32
-            transform
-          "
+          class="absolute top-1/2 right-full -translate-y-1/2 -translate-x-32 transform"
           width="404"
           height="384"
           fill="none"
@@ -112,20 +106,11 @@
     <div class="relative px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-prose text-lg">
         <h1>
-          <span class="block text-center text-lg font-semibold text-accent"
+          <span class="block text-center text-lg font-semibold text-analogteal"
             >Last updated: November 13, 2022</span
           >
           <span
-            class="
-              mt-2
-              block
-              text-center text-3xl
-              font-bold
-              leading-8
-              tracking-tight
-              text-white
-              sm:text-4xl
-            "
+            class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-white sm:text-4xl"
             >Terms and Conditions</span
           >
         </h1>
@@ -144,19 +129,16 @@
       <h1 class="text-white">What do Anya-Chan store</h1>
       <ul>
         <li>
-          <p>
-            Discord user ID (Needed for logging purposes)
-          </p>
+          <p>Discord user ID (Needed for logging purposes)</p>
         </li>
         <li>
           <p>
-            Guild ID (Needed for moderation purposes created with the "welcome" and "leave" commands)
+            Guild ID (Needed for moderation purposes created with the "welcome"
+            and "leave" commands)
           </p>
         </li>
         <li>
-          <p>
-            Channel ID (Used to send message in a channel)
-          </p>
+          <p>Channel ID (Used to send message in a channel)</p>
         </li>
         <li>
           <p>Interaction ID / Message content</p>

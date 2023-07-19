@@ -4,42 +4,40 @@ import { ChevronUpIcon, BadgeCheckIcon } from "@heroicons/vue/solid";
 </script>
 
 <script>
-import { ref } from 'vue'
-import {commandsList} from "../../models/commandsList";
-import axios from 'axios';
+import { ref } from "vue";
+import { commandsList } from "../../models/commandsList";
+import axios from "axios";
 
 export default {
   name: "Commands",
-  data () {
+  data() {
     return {
       commands: [],
       botstats: null,
-    }
+    };
   },
   mounted() {
-    this.commands = ref(commandsList)
-    axios.get('http://150.136.137.28:7700/api/stats').then(response => {
-      this.botstats = [
-        {
-          name: "Total Servers",
-          value: response.data.guilds || '-',
-        },
-        {
-          name: "Total Users",
-          value: response.data.users || '-',
-        },
-        {
-          name: "Total Commands",
-          value: response.data.commands || '-',
-        },
-        {
-          name: "Verified",
-          icon: BadgeCheckIcon
-        },
-      ]
-    });
-  }
-}
+    this.commands = ref(commandsList);
+    this.botstats = [
+      {
+        name: "Total Servers",
+        value: "^400",
+      },
+      {
+        name: "Total Users",
+        value: "^1000",
+      },
+      {
+        name: "Total Commands",
+        value: "54",
+      },
+      {
+        name: "Verified",
+        icon: BadgeCheckIcon,
+      },
+    ];
+  },
+};
 </script>
 
 <template>
@@ -98,15 +96,29 @@ export default {
                 class="my-2"
               >
                 <div class="text-sm text-gray-300 my-0.5">
-                  <span class="text-white font-semibold">/{{ command.name }}</span>
+                  <span class="text-white font-semibold"
+                    >/{{ command.name }}</span
+                  >
                   <span class="mx-2"> - </span>
                   <span>{{ command.description }}</span>
                 </div>
                 <div class="flex items-center">
                   <span class="text-sm text-gray-300 mr-2">Usage:</span>
-                  <span class="text-analoggreen font-semibold">/{{ command.name }}</span>
-                  <span class="text-sm text-gray-300 mx-2" v-for="opt of command.options" :key="opt.name">
-                    <span :class="opt.required ? 'text-accent font-semibold' : 'text-white'">
+                  <span class="text-analoggreen font-semibold"
+                    >/{{ command.name }}</span
+                  >
+                  <span
+                    class="text-sm text-gray-300 mx-2"
+                    v-for="opt of command.options"
+                    :key="opt.name"
+                  >
+                    <span
+                      :class="
+                        opt.required
+                          ? 'text-accent font-semibold'
+                          : 'text-white'
+                      "
+                    >
                       <span class="text-analogteal">[</span>
                       {{ opt.name }}
                       <span class="text-analogteal">]</span>

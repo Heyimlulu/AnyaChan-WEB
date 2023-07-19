@@ -7,19 +7,11 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ButtonRepo: typeof import('./src/components/ButtonRepo.vue')['default']
     Commands: typeof import('./src/components/sections/Commands.vue')['default']
-    Disclosure: typeof import('@headlessui/vue')['Disclosure']
-    DisclosureButton: typeof import('@headlessui/vue')['DisclosureButton']
-    DisclosurePanel: typeof import('@headlessui/vue')['DisclosurePanel']
     Features: typeof import('./src/components/sections/Features.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     Home: typeof import('./src/components/sections/Home.vue')['default']
-    Menu: typeof import('@headlessui/vue')['Menu']
-    MenuButton: typeof import('@headlessui/vue')['MenuButton']
-    MenuItem: typeof import('@headlessui/vue')['MenuItem']
-    MenuItems: typeof import('@headlessui/vue')['MenuItems']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
