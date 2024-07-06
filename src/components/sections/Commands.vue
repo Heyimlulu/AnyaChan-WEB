@@ -21,11 +21,11 @@ export default {
     this.botstats = [
       {
         name: "Total Servers",
-        value: "^400",
+        value: "^500",
       },
       {
         name: "Total Users",
-        value: "^1000",
+        value: "^100000",
       },
       {
         name: "Total Commands",
